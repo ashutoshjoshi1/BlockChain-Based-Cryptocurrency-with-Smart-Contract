@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" maxwidth="100%">
+    <meta name="description" content="Crypto Currency Comparison">
+    <meta name="author" content="">
+
+    <title>Samriddhi Coin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/2-col-portfolio.css" rel="stylesheet">
+<!-- 
+   <link rel="icon" type="image/x-icon" href="favicon.ico" /> -->
+
+  <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+
+  </head>
+
+  <body>
+  	
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><h3><b>Samriddhi Coin</b></h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Main
+                <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ <div class="jumbotron">
+     <div class="head-font">
+      <h1 class="my-3"><a  class=""><b>Analyze&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;Utilize&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;& Invest</b></h1></a></div>
+  <div class="container"></div>
+</div>
+      <!-- Page Content -->
+ <div class="container">
+
+      <div class="form-group row">
+
+      		<div class="col-2">
+            
+    			<button type="button" class="btn btn-primary btn-compare" onclick="document.getElementById('id01').style.display='block'" style="width:auto;margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%; align-self: 'center"> Login </button>
+
+          <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button onclick="window.location.href='/UI/page2.html'"type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+  			</div>
+        <div class="col-3"></div>
+  			
+	  </div>
+
+    <div class="row">
+        <!--======================================================================================================================-->
+        
+		
+		
+
+        
+	<!--====================================================================================================================================-->
+
+    </div>
+	</div>
+
+    <!-- /.container -->
+<!--
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-2">
+    <button type="button" class="btn btn-primary" id="btn-graph-btc">BTC Graph</button>
+  </div>
+  <div class="col-3">
+    <button type="button" class="btn btn-primary" id="btn-graph-eth">ETH Graph</button>
+  </div>
+  <div class="col-3"></div>
+</div>
+-->
+
+<!--graph-->
+<div class="row">
+    <div class="col-11" style="width: 100%; height:50%">
+    <div><canvas id="myChart"></canvas></div>
+    <!--<div><canvas id="myChartETH"></canvas></div>-->
+    </div>
+    <div class="col-1"></div>
+</div>
+
+    <div class="filler"></div>
+
+    <!-- Footer -->
+    <footer class="py-2 bg-dark index-footer">
+      
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    
+    <script src="myChart.js" type="text/javascript"></script>
+    <!--<script src="myChartETH.js" type="text/javascript"></script>-->
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/API.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/0a1e876e6a.js"></script>
+    <script >
+      var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    </script>
+
+  </body>
+
+</html>
